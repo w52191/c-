@@ -29,6 +29,11 @@ int main(){
   cout << *(*(*pr)[0])(arr, 1) << ", ";
   cout << *(*pr)[1](arr, 2) << ", ";
   cout << *(*pr)[2](arr, 3) << ", " << endl;
+
+  typedef const double *(*fun_c)(const double *, int);
+  fun_c prt = f1;
+  fun_c arr2[3] = {f1,f2,f3};
+  cout << *arr2[0](arr, 2) << endl;
   return 0;
 }
 
